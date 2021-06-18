@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_ui/data/data.dart';
 import 'package:netflix_ui/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
@@ -40,6 +47,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: CustomScrollView(
         controller: _scrollController,
+        slivers: <Widget>[
+          SliverToBoxAdapter(
+            child: ContentHeader(featuredContent: sintelContent),
+          )
+        ],
       ),
     );
   }
