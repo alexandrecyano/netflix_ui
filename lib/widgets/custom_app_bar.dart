@@ -2,33 +2,42 @@ import 'package:flutter/material.dart';
 import '../assets.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  final double scrollOffest;
+
+  const CustomAppBar({
+    Key? key,
+    this.scrollOffest = 0.0,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 24.0),
-      color: Colors.orange,
+      color:
+          Colors.black.withOpacity((scrollOffest / 350).clamp(0, 1).toDouble()),
       child: SafeArea(
         child: Row(
           children: [
             Image.asset(Assets.netflixLogo0),
             const SizedBox(width: 12.0),
-            Row(
-              children: [
-                _AppBarButton(
-                  title: 'TV Shows',
-                  onTap: () => print('TV Shows'),
-                ),
-                _AppBarButton(
-                  title: 'TV Shows',
-                  onTap: () => print('TV Shows'),
-                ),
-                _AppBarButton(
-                  title: 'TV Shows',
-                  onTap: () => print('TV Shows'),
-                ),
-              ],
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _AppBarButton(
+                    title: 'TV Shows',
+                    onTap: () => print('TV Shows'),
+                  ),
+                  _AppBarButton(
+                    title: 'Movies',
+                    onTap: () => print('Movies'),
+                  ),
+                  _AppBarButton(
+                    title: 'My List',
+                    onTap: () => print('My List'),
+                  ),
+                ],
+              ),
             )
           ],
         ),
