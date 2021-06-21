@@ -19,7 +19,7 @@ class ContentHeader extends StatelessWidget {
             image: DecorationImage(
                 image: AssetImage(featuredContent.imageUrl), fit: BoxFit.cover),
           ),
-        )
+        ),
       ],
     );
   }
