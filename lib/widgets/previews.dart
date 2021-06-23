@@ -45,6 +45,8 @@ class Previews extends StatelessWidget {
                         image: DecorationImage(
                             image: AssetImage(content.imageUrl),
                             fit: BoxFit.cover),
+                        shape: BoxShape.circle,
+                        border: Border.all(color: content.color, width: 4.0),
                       ),
                     ),
                   ],
