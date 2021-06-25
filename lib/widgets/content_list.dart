@@ -43,18 +43,19 @@ class ContentList extends StatelessWidget {
                 return GestureDetector(
                   onTap: () => print(content.name),
                   child: Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                      height: isOriginals ? 400.0 : 200.0,
-                      width: isOriginals ? 200.0 : 130.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(content.imageUrl),
-                            fit: BoxFit.cover),
-                      )),
+                    margin: const EdgeInsets.symmetric(horizontal: 8.0),
+                    height: isOriginals ? 400.0 : 200.0,
+                    width: isOriginals ? 200.0 : 130.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(content.imageUrl),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
                 );
               },
             ),
-          )
+          ),
         ],
       ),
     );
