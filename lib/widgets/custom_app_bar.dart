@@ -73,12 +73,20 @@ class _CustomAppBarDesktop extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _AppBarButton(
+                  title: 'Home',
+                  onTap: () => print('Home'),
+                ),
+                _AppBarButton(
                   title: 'TV Shows',
                   onTap: () => print('TV Shows'),
                 ),
                 _AppBarButton(
                   title: 'Movies',
                   onTap: () => print('Movies'),
+                ),
+                _AppBarButton(
+                  title: 'Latest',
+                  onTap: () => print('Latest'),
                 ),
                 _AppBarButton(
                   title: 'My List',
