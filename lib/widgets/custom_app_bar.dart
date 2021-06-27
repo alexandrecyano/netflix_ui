@@ -94,7 +94,43 @@ class _CustomAppBarDesktop extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.search),
+                  iconSize: 28.0,
+                  color: Colors.white,
+                  onPressed: () => print('Search'),
+                ),
+                _AppBarButton(
+                  title: 'KIDS',
+                  onTap: () => print('KIDS'),
+                ),
+                _AppBarButton(
+                  title: 'DVD',
+                  onTap: () => print('DVD'),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.card_giftcard),
+                  iconSize: 28.0,
+                  color: Colors.white,
+                  onPressed: () => print('Gift'),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.notifications),
+                  iconSize: 28.0,
+                  color: Colors.white,
+                  onPressed: () => print('Notifications'),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
