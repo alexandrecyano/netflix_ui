@@ -6,6 +6,6 @@
   
 <img src="/images/img2.png"/>
 
-<img src="/images/3.png"/> 
+<img src="/images/img3.png"/> 
 
 </p>
